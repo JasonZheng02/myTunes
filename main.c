@@ -19,22 +19,28 @@ int main(void) {
   print_node(songList);
   printf("\n========================================\n");
   
-  printf("\nTesting find_node:\nlooking for [Jack: ASDF]\n");
+  printf("\nTesting find_node:\nlooking for Jack: ASDF\n");
   print_node(find_node(songList,"ASDF", "Jack"));
   
   printf("\n\nTesting find_artist:\n");
   print_node(find_artist(songList, "Fred"));
   
-  printf("\nTesting random:\n");
+  printf("\n\nTesting random:\n");
+  print_node(random_node(songList));
+  printf("\n");
+  print_node(random_node(songList));
+  printf("\n");
   print_node(random_node(songList));
   
-  printf("\nTesting remove:\n");
+  printf("\n\nTesting remove:\n");
+  printf("Removing Fred: Yo|\n");
   print_list(remove_node(songList,"Yo","Fred"));
   
-  printf("\nTesting free_list:\n");
+  printf("\n\nTesting free_list:\n");
+  print_list(free_list(songList));
+  printf("After printing the empty list\n");
   
-  
-  printf("========================================");
+  printf("========================================\n");
   printf("\nMUSIC LIBRARY TESTS\n");
-  printf("========================================");
+  printf("\n========================================\n");
 }
