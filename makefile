@@ -4,15 +4,18 @@ else
 	CC = gcc
 endif
 
-all: main.o linkedList.o
-	$(CC) -o output main.o linkedList.o
+all: main.o linkedList.o musicLibrary.o
+	$(CC) -o output main.o linkedList.o musicLibrary.o
 
-main.o: main.c linkedList.h
+main.o: main.c linkedList.h musicLibrary.h
 	$(CC) -c main.c
 
 linkedList.o: linkedList.c linkedList.h
 	$(CC) -c linkedList.c
-
+	
+musicLibrary.o: musicLibrary.c musicLibrary.h
+	$(CC) -c musicLibrary.c
+	
 run:
 	./output
 
